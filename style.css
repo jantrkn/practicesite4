@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 40px;
+    font-family: "Montserrat";
+    scroll-behavior: smooth;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sec-1 {
+    background-color: rgb(214, 228, 92);
+}
+#sec-2 {
+    background-color: aliceblue;
+}
+#sec-3 {
+    background-color: pink;
+}
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+.scroll-down::after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%);
+    border: 2px solid black;
+    border-radius: 50%;
+    animation: scroll-down 1.6s ease-in-out infinite;
+}
+.scroll-down::before {
+    top: 35%;
+    animation-delay: 0.5s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+}
+  
+@keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+}
+  
